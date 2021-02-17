@@ -13,7 +13,7 @@ export class GPUSimulation {
 
     this.SPACE_BBOUND = 100;
     this.SPAC_BOUND_HALF = this.SPACE_BBOUND / 2;
-    this.WIDTH = 25;
+    this.WIDTH = 50;
     this.HEIGHT = 1;
     this.INSTANCE_COUNT = this.WIDTH * this.HEIGHT;
     this.renderer = renderer;

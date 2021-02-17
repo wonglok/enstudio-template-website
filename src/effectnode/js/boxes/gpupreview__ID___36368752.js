@@ -15,7 +15,7 @@ class NoodleGeo {
     count = 24 * 24,
     numSides = 4,
     subdivisions = 50,
-    openEnded = false,
+    openEnded = true,
     thickness = 1.0,
   }) {
     const radius = 1;
@@ -226,11 +226,11 @@ export const box = async (relay) => {
   let onFrame = await relay.Resources.get("onFrame");
 
   let { geometry, subdivisions, thickness } = new NoodleGeo({
-    thickness: 0.06,
-    count: 100,
+    thickness: 0.16,
+    count: 8,
     subdivisions: gpu.INSTANCE_COUNT,
   });
-  geometry.instanceCount = 100;
+  geometry.instanceCount = 8;
 
   let lookupAttr = gpu.getLookUpAttr();
   geometry.setAttribute(lookupAttr.name, lookupAttr.attr);
@@ -305,8 +305,11 @@ export const box = async (relay) => {
         vec3 pt;
 
         pt += getPointAt(t);// + vec3(vec4(getPointAt(t * 0.1), 1.0) * rotationZ(time));
-        pt += offset * 15.0;
-        pt = rotate(pt, normalize(pt), time);
+        pt += offset * (15.0) * t;
+
+        // pt.x += 5.0 * sin(0.1 * pt.x);
+        // pt.y += 5.0 * sin(0.1 * pt.y);
+        // pt.z += 5.0 * sin(0.1 * pt.z);
         return pt;
       }
 

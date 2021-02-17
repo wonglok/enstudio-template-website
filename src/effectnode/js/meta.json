@@ -159,8 +159,8 @@
 			"isProtected": false,
 			"isUserBoxes": true,
 			"_id": "_20661972",
-			"x": -63.32173156738281,
-			"y": -445.0028381347656,
+			"x": -35.75093078613281,
+			"y": -454.8807373046875,
 			"displayName": "spec",
 			"moduleName": "spec__ID___20661972",
 			"fileName": "spec__ID___20661972.js",
@@ -197,13 +197,13 @@
 					"_id": "_14234647",
 					"name": "tailColor",
 					"type": "color",
-					"value": "#3f4200"
+					"value": "#573700"
 				},
 				{
 					"_id": "_73280948",
 					"name": "opacityTail",
 					"type": "number",
-					"value": 100
+					"value": 68.5
 				}
 			],
 			"inputs": [
@@ -331,7 +331,7 @@
 					"_id": "_95959173",
 					"name": "threshold",
 					"type": "number",
-					"value": 30.4
+					"value": 20
 				},
 				{
 					"_id": "_57883341",
@@ -343,7 +343,7 @@
 					"_id": "_61203682",
 					"name": "strength",
 					"type": "number",
-					"value": 15.8
+					"value": 39.9
 				}
 			],
 			"inputs": [
@@ -420,8 +420,8 @@
 			"isProtected": false,
 			"isUserBoxes": true,
 			"_id": "_36368752",
-			"x": -172.9045867919922,
-			"y": 246.41650390625,
+			"x": -357.81321716308594,
+			"y": 260.263427734375,
 			"displayName": "gpu-preview",
 			"moduleName": "gpupreview__ID___36368752",
 			"fileName": "gpupreview__ID___36368752.js",
@@ -447,8 +447,8 @@
 			"isProtected": false,
 			"isUserBoxes": true,
 			"_id": "_86221251",
-			"x": -332.6833190917969,
-			"y": -70.02777099609375,
+			"x": -320.34938049316406,
+			"y": -8.348388671875,
 			"displayName": "gpu-simulation",
 			"moduleName": "gpusimulation__ID___86221251",
 			"fileName": "gpusimulation__ID___86221251.js",
@@ -568,22 +568,22 @@
 			"inputSlotID": "_74312772"
 		},
 		{
-			"_id": "_73990080",
-			"outputBoxID": "_69052648",
-			"inputBoxID": "AAA",
-			"inputSlotID": "_32932375"
-		},
-		{
-			"_id": "_72062877",
-			"outputBoxID": "_99044968",
-			"inputBoxID": "AAA",
-			"inputSlotID": "_14020659"
-		},
-		{
 			"_id": "_84180542",
 			"outputBoxID": "_51409182",
 			"inputBoxID": "_69052648",
 			"inputSlotID": "_30247623"
+		},
+		{
+			"_id": "_8736334",
+			"outputBoxID": "_69052648",
+			"inputBoxID": "AAA",
+			"inputSlotID": "_14020659"
+		},
+		{
+			"_id": "_80293900",
+			"outputBoxID": "_99044968",
+			"inputBoxID": "AAA",
+			"inputSlotID": "_32932375"
 		}
 	]
 }
