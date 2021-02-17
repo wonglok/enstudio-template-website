@@ -36,7 +36,7 @@ function BgEnv() {
 export const box = (relay) => {
   relay.pulse({
     type: "page",
-    href: "/",
+    href: "/home",
     Component: () => {
       return (
         <Canvas

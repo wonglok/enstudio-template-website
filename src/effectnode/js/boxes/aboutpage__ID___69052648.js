@@ -53,7 +53,7 @@ function SetGlobal({ relay }) {
 export const box = (relay) => {
   relay.pulse({
     type: "page",
-    href: "/about",
+    href: "/",
     Component: () => {
       return (
         <Canvas
