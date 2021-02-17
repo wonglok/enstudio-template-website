@@ -227,11 +227,11 @@ export const box = async (relay) => {
   let onFrame = await relay.Resources.get("onFrame");
 
   let { geometry, subdivisions, thickness } = new NoodleGeo({
-    thickness: 0.2,
-    count: 2 * 2 * 2,
+    thickness: 0.06,
+    count: 100,
     subdivisions: gpu.INSTANCE_COUNT,
   });
-  geometry.instanceCount = 2 * 2 * 2;
+  geometry.instanceCount = 100;
 
   let lookupAttr = gpu.getLookUpAttr();
   geometry.setAttribute(lookupAttr.name, lookupAttr.attr);
@@ -306,7 +306,7 @@ export const box = async (relay) => {
         vec3 pt;
 
         pt += getPointAt(t);// + vec3(vec4(getPointAt(t * 0.1), 1.0) * rotationZ(time));
-        pt += offset * 5.0;
+        pt += offset * 15.0;
         pt = rotate(pt, normalize(pt), time);
         return pt;
       }

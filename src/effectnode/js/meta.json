@@ -331,19 +331,19 @@
 					"_id": "_95959173",
 					"name": "threshold",
 					"type": "number",
-					"value": 0
+					"value": 30.4
 				},
 				{
 					"_id": "_57883341",
 					"name": "radius",
 					"type": "number",
-					"value": 1.7
+					"value": 16.5
 				},
 				{
 					"_id": "_61203682",
 					"name": "strength",
 					"type": "number",
-					"value": 22.5
+					"value": 15.8
 				}
 			],
 			"inputs": [
@@ -580,7 +580,7 @@
 			"inputSlotID": "_14020659"
 		},
 		{
-			"_id": "_6987461",
+			"_id": "_84180542",
 			"outputBoxID": "_51409182",
 			"inputBoxID": "_69052648",
 			"inputSlotID": "_30247623"
