@@ -9,9 +9,9 @@ const makeSocketClient = async ({ host = config.dev.apple, nameID }) => {
 
   let socket = io(`ws://${host}/${nameID}`);
 
-  Cahce.set(nameID);
-
-  return socket;
+  Cahce.set(nameID, {
+    socket,
+  });
 };
 
 makeSocketClient({ nameID: "meta" });

@@ -1,3 +1,9 @@
+import { Layout } from "./Layout";
+import { SVGArea } from "./SVGArea";
 export const GraphApp = () => {
-  return <div>GraphAPp</div>;
+  return (
+    <Layout title="Creative Coding Tool">
+      <SVGArea></SVGArea>
+    </Layout>
+  );
 };

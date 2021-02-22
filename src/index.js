@@ -1,12 +1,13 @@
 import React from "react";
 import ReactDOM from "react-dom";
-import "./index.css";
 import { EffectNode } from "./effectnode/app/core.js";
 import { dev } from "./effectnode/effectnode.config";
 import reportWebVitals from "./reportWebVitals";
 
-let loadDefault = () => {
+let loadEffectNode = () => {
+  require("./App.css");
   EffectNode({ domElement: document.getElementById("root") });
+  reportWebVitals();
 };
 
 if (process.env.NODE_ENV === "development") {
@@ -19,15 +20,13 @@ if (process.env.NODE_ENV === "development") {
       document.getElementById("root")
     );
   } else {
-    loadDefault();
+    loadEffectNode();
   }
 } else {
-  loadDefault();
+  loadEffectNode();
 }
 
 // If you want to start measuring performance in your app, pass a function
 // to log results (for example: reportWebVitals(console.log))
 // or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
-reportWebVitals();
-
-//
+reportWebVitals(console.log);

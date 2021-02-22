@@ -1,19 +1,24 @@
-import { useEffect, useState } from "react";
-import { getDevelopmentSockets } from "../apis/socketapi";
+import { createContext, useEffect } from "react";
 import { GraphApp } from "../devtools/GraphApp";
+import "./index.css";
+import { useSystem } from "./store";
+
+export const ProjectContext = createContext({});
 
 export function DevApp() {
-  const [deps, setDeps] = useState(false);
+  let sys = useSystem((s) => s);
+
   useEffect(() => {
-    getDevelopmentSockets().then((res) => {
-      setDeps(res);
-    });
-  });
+    sys.init();
+  }, []);
+
   return (
-    deps && (
-      <div className="full">
-        <GraphApp></GraphApp>
-      </div>
-    )
+    <div className="full">
+      {sys.geo && (
+        <ProjectContext.Provider value={sys}>
+          <GraphApp></GraphApp>
+        </ProjectContext.Provider>
+      )}
+    </div>
   );
 }
